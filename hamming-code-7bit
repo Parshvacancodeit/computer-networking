@@ -1,0 +1,25 @@
+#include<iostream>
+using namespace std;
+int main() {
+int arr[7];
+for(int i=1; i<=7; i++) {
+cin>>arr[i];
+}
+int p1,p2,p4,error;
+p1=arr[3]^arr[5]^arr[7]^arr[1];
+p2=arr[3]^arr[6]^arr[7]^arr[2];
+p4=arr[5]^arr[6]^arr[7]^arr[4];
+error=(p1*1)+(p2*2)+(p4*4);
+if(arr[error]==0){
+   arr[error]=1;
+}
+else{
+   arr[error]=0;
+}
+for(int i=1; i<=7; i++) {
+cout<<arr[i]<<" ";
+
+}
+cout<<"Error bit is:"<<(7-error+1);
+
+}
